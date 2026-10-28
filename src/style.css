@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f5f5f0;
+  color: #253b37;
+  font-family:
+    Segoe UI,
+    Microsoft YaHei,
+    sans-serif;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+  border: 1px solid #d9e1db;
+  background: white;
+  color: #31564b;
+  padding: 9px 13px;
+  border-radius: 8px;
+}
+button:hover {
+  background: #e9f0e9;
+}
+small {
+  color: #81918a;
+}
+p {
+  color: #7a8981;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+aside {
+  width: 226px;
+  background: #edf0e8;
+  padding: 30px 22px;
+  flex-shrink: 0;
+}
+.brand {
+  font-size: 29px;
+  font-weight: 800;
+  color: #34705b;
+  margin-bottom: 16px;
+}
+.brand span {
+  font-size: 19px;
+  margin-left: 12px;
+}
+nav {
+  display: grid;
+  gap: 10px;
+  margin: 40px 0;
+}
+nav button {
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 13px;
+}
+.active {
+  background: #d9e5d8 !important;
+  font-weight: 600;
+}
+aside label {
+  display: block;
+  margin-top: 24px;
+  font-size: 13px;
+}
+main {
+  padding: 38px;
+  flex: 1;
+  min-width: 0;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+h1 {
+  font-size: 27px;
+  margin: 9px 0;
+}
+h2 {
+  font-size: 18px;
+}
+h3 {
+  font-size: 14px;
+  word-break: break-all;
+}
+.badge {
+  background: #e3ebdc;
+  border-radius: 30px;
+  padding: 10px 15px;
+  font-size: 13px;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.toolbar p {
+  flex: 1;
+}
+.toolbar label {
+  font-size: 13px;
+}
+.inbox {
+  border: 2px dashed #adc4ad;
+  background: #eef3e9;
+  border-radius: 16px;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.grid,
+.quadrants {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.project,
+.empty,
+.quadrant,
+.listing {
+  background: #fff;
+  border: 1px solid #e0e5dc;
+  border-radius: 14px;
+  padding: 24px;
+}
+.project {
+  min-height: 200px;
+}
+.folder {
+  font-size: 27px;
+  color: #b89860;
+}
+.path {
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin: 8px 0;
+  word-break: break-all;
+  font-size: 12px;
+}
+.empty {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 50px;
+}
+.listing {
+  margin-top: 20px;
+}
+.listing p {
+  word-break: break-all;
+}
+.file {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf0eb;
+}
+.file span {
+  flex: 1;
+  word-break: break-all;
+}
+.notice {
+  padding: 12px;
+  background: #fff1cc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.quadrant {
+  min-height: 230px;
+  border-top: 4px solid #cc8b75;
+}
+.q1 {
+  border-top-color: #6a9c83;
+}
+.q2 {
+  border-top-color: #cfb16d;
+}
+.q3 {
+  border-top-color: #9fa9bd;
+}
+.quadrant h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.quadrant article {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #e5e8e2;
+  border-radius: 9px;
+  padding: 12px;
+  margin: 10px 0;
+  cursor: grab;
+}
+.quadrant article span {
+  flex: 1;
+}
+.done span {
+  text-decoration: line-through;
+  color: #9ca69e;
+}
+.side aside {
+  display: none;
+}
+.side main {
+  padding: 18px;
+}
+.side h1 {
+  font-size: 19px;
+}
+.side .grid,
+.side .quadrants {
+  grid-template-columns: 1fr;
+}
+.side .badge {
+  white-space: nowrap;
+}
+.side .inbox {
+  display: block;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #172c3866;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+}
+.modal {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  width: min(520px, 90vw);
+}
+.modal label {
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.modal input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 16px 0;
+  border: 1px solid #b6c8b8;
+  border-radius: 6px;
+}
+.modal > div {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
